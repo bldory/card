@@ -1,3 +1,23 @@
+var wi = document.getElementById('we').width;
+var he = document.getElementById('we').height;
+
+$('#we').draggable({
+    scroll: false,
+    containment: "#bg-container",
+            
+    start: function( event, ui ) {
+        console.log("start top is :" + ui.position.top)
+        console.log("start left is :" + ui.position.left)
+    },
+    drag: function(event, ui) {
+        console.log('draging.....');    
+    },
+    stop: function( event, ui ) {
+        console.log("stop top is :" + ui.position.top)
+        console.log("stop left is :" + ui.position.left)
+    }
+});
+
 function cardname() {
     document.getElementById('cname').innerText = document.getElementById('name').value;
     console.log(document.getElementById('name').value)
@@ -25,7 +45,7 @@ var wob = document.getElementById('black');
 var skill = document.getElementById('skill');
 var skillname = document.getElementById('skillname');
 
-wob.addEventListener('change', function() {
+wob.addEventListener('input', function() {
     if(wob.value == 0) {
         skill.style.color = 'black';
         skillname.style.color = "black";
@@ -65,7 +85,7 @@ console.log(numbel);
         numbering.innerText = '마이너스라니';
     }
     if (numbel > 99999999) {
-        numbering.innerText = 'ㅇㄴ 욕심;;';
+        numbering.innerText = '욕심이 너무 과한 것 아니오';
     }
 }
 
@@ -83,4 +103,51 @@ function downloadURI(uri, name){
 	link.href = uri;
 	document.body.appendChild(link);
 	link.click();
+}
+
+const dragElement = (e) => {
+  const MAX_WIDTH = 5000, MAX_HEIGHT = 5000;
+  const elmnt = e.target;
+  let = posX = 0, posY = 0, originX = 0, originY = 0, x = 0, y = 0;
+  
+  function mouseDown(e) {
+  e.preventDefault();
+  originX = e.clientX;
+  originY = e.clientY;
+  document.onmouseup = mouseUp;
+  document.onmousemove = mouseMove;
+}
+  
+  function mouseMove(e) {
+  e.preventDefault();
+  posX = e.clientX - originX;
+  poxY = e.clientY - originY;
+  
+  if (elmnt.offsetLeft + posX >= 0 && elmnt.offsetLeft + elmnt.offsetWidth + posX <= MAX_WIDTH) {
+    x = posX;
+  }
+  
+  if (elmnt.offsetTop + posY >= 0 && elmnt.offsetTop + elmnt.offsetHeight + posY <= MAX_HEIGHT) {
+    y = posY;
+  }
+  
+  elmnt.style.transform = `translate(${x}px, ${y}px)`;
+}
+  
+  function mouseUp(e) {
+  elmnt.style.transfrom = "";
+  elmnt.style.left = `${elmnt.offsetLeft + x}px`;
+  elmnt.style.top = `${elmnt.offsetTop + y}px`;
+  
+  document.onmouseup = null;
+  document.onmousemove = null;
+}
+
+  mouseDown(e);
+}
+
+function scale() {
+    var val = document.getElementById('scale').value;
+    document.getElementById('we').style.width =val + 'px';
+    document.getElementById('we').style.height = val / wi * he + 'px';
 }
