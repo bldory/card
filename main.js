@@ -58,6 +58,15 @@ console.log(numbel);
     if (10 <= numbel && numbel < 100) {
         numbering.innerText = '#0' + numbel;
     }
+    if (numbel >= 100 && numbel <= 99999999) {
+        numbering.innerText = '#' + numbel;
+    }
+    if (numbel < 0) {
+        numbering.innerText = '마이너스라니';
+    }
+    if (numbel > 99999999) {
+        numbering.innerText = 'ㅇㄴ 욕심;;';
+    }
 }
 
 function PrintDiv(div){
