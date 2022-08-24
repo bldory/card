@@ -1,0 +1,87 @@
+* {
+    accent-color: #aaa;
+}
+
+.content {
+    position: relative;
+    width: 210px;
+    height: 297px;
+    overflow: hidden;
+    background: #000;
+}
+
+#cname {
+    text-align: center;
+    padding: 5px;
+    left: 0px;
+    top: -5px;
+    width: 115px;
+    font-size: larger;
+    position: absolute;
+    font-family: 'OKCHAN';
+    z-index: 2;
+}
+
+#we {
+    position: relative;
+}
+
+#i {
+    position: absolute;
+    z-index: 1;
+}
+
+#cardnumber {
+    position: absolute;
+    z-index: 3;
+    right: 8px;
+    top: 4px;
+    font-size: small;
+}
+
+#skillname {
+    position: absolute;
+    font-family: 'KOTRALEAP';
+    top: 220px;
+    width: 210px;
+    text-align: center;
+    text-shadow: #000 0 0 5px;
+    z-index: 4;
+    color: #fff;
+}
+
+#skill {
+    font-family: 'HallymGothic-Regular';
+    position: absolute;
+    text-decoration-style: true;
+    bottom: 5px;
+    width: 210px;
+    height: 45px;
+    bottom: 0px;
+    text-align: center;
+    font-size: 12px;
+    z-index: 5;
+    color: white;
+    viewport-fit: top;
+}
+
+@font-face {
+    font-family: 'OKCHAN';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2206-02@1.0/OKCHAN.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'HallymGothic-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2204@1.0/HallymGothic-Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'KOTRALEAP';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2110@1.0/KOTRALEAP.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}

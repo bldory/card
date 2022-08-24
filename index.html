@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>카드 제조기</title>
+  <link rel="stylesheet" href="./style.css" type="text/css" media="all" />
+   <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+</head>
+
+<body>
+    <div class="content">
+        <div id="cname"></div>
+        <img src="./frane.png" alt="" id="i"/>
+        <img src="" alt="" id="we"/>
+        <div><b id="cardnumber"></b></div>
+        <div id="skillname">Deja vu</div>
+        <div id="skill">질주하여 사람을 박습니다.</div>
+    </div>
+    <input type="file" name="file" id="file"/><br>
+    <input type="text" name="name" id="name" value="" onkeyup="cardname()" placeholder="카드의 이름을 입력하세요"/><br>
+    <input type="number" name="number" id="number" value="" placeholder="카드 번호를 입력하세요" onkeyup="setnumber()"/><br>
+    <label for="black">검정 / 하양</label>
+    <input type="range" name="black" id="black" value="1" max="1"/><br>
+    <input type="text" name="csn" id="csn" value="" placeholder="스킬 이름을 입력하세요"/><br />
+    <input type="text" name="cs" id="cs" value="" placeholder="스킬 내용을 입력하세요" />
+  <a href='javascript:void(0);' onclick="PrintDiv($('.content'));">다운로드</a>
+    <script src="./html2canvas.js" type="text/javascript" charset="utf-8"></script>
+    <script src="./main.js"></script>
+</body>
+</html>
