@@ -148,6 +148,6 @@ const dragElement = (e) => {
 
 function scale() {
     var val = document.getElementById('scale').value;
-    document.getElementById('we').style.width =val + 'px';
-    document.getElementById('we').style.height = val / wi * he + 'px';
+    document.getElementById('we').style.width = val / he * wi + 'px';
+    document.getElementById('we').style.height = val + 'px';
 }
