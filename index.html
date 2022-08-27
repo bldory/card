@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -9,17 +8,19 @@
 </head>
 
 <body>
-<link href="/resources/jqueryui/jquery-ui.css" rel="stylesheet">
+<link href="./resources/jqueryui/jquery-ui.css" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-1.7.2.min.js"></script>
     <script src="https://code.jquery.com/ui/1.8.21/jquery-ui.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script>
-    <div class="content">
+    <div class="content" crossorigin="anonymous">
         <div id="cname"></div>
-        <img src="./frane.png" alt="" id="i"/>
+        <img src="./frane.png" alt="" id="i" />
         <img src="" alt="" id="we"/>
+        <div id="rarity">COMMON</div>
         <div><b id="cardnumber"></b></div>
         <div id="skillname">Deja vu</div>
         <div id="skill">질주하여 사람을 박습니다.</div>
+        <div id="stat"><p id="atks">ATK : </p><p id="defs">DEF : </p></div>
     </div>
     <input type="file" name="file" id="file"/><br>
     <input type="text" name="name" id="name" value="" onkeyup="cardname()" placeholder="카드의 이름을 입력하세요"/><br>
@@ -30,8 +31,15 @@
     <input type="text" name="cs" id="cs" value="" placeholder="스킬 내용을 입력하세요" /> <br />
     <label for="scale">이미지 크기</label>
     <input type="range" name="scale" id="scale" max="320" oninput="scale()"/>
-  <a href='javascript:void(0);' onclick="PrintDiv($('.content'));">다운로드</a>
-    <script src="./html2canvas.js" type="text/javascript" charset="utf-8"></script>
+    <br>
+    <label for="rare">희귀도</label>
+    <input type="range" name="rare" id="rare" max="7" value="0">
+    <br>
+    <input type="text" name="atk" id="atk" placeholder="공격력을 입력하세요"><br>
+    <input type="text" name="def" id="def" placeholder="방어력을 입력하세요"><br>
+    <button id="save">다운로드</button>
+    <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
     <script src="./main.js"></script>
+    <a id="target" style="display: none"></a>
 </body>
 </html>

@@ -1,3 +1,6 @@
+/**
+ * @type number;
+ */
 var wi = document.getElementById('we').width;
 var he = document.getElementById('we').height;
 
@@ -89,21 +92,54 @@ console.log(numbel);
     }
 }
 
-function PrintDiv(div){
-	div = div[0]
-	html2canvas(div).then(function(canvas){
-		var myImage = canvas.toDataURL();
-		downloadURI(myImage, "card.png") 
-	});
-}
+/*$("#save").on("click", function() {
+	sreenShot($(".content"));
+});
 
-function downloadURI(uri, name){
-	var link = document.createElement("a")
-	link.download = name;
-	link.href = uri;
-	document.body.appendChild(link);
-	link.click();
-}
+function sreenShot(target) {
+	if (target != null && target.length > 0) {
+		var t = target[0];
+		html2canvas(t).then(function(canvas) {
+			var myImg = canvas.toDataURL("image/png");
+			myImg = myImg.replace("data:image/png;base64,", "");
+
+			$.ajax({
+				type : "POST",
+				data : {
+					"imgSrc" : myImg
+				},
+				dataType : "text",
+				url : contextPath + "/public/ImgSaveTest.do",
+				success : function(data) {
+					console.log(data);
+				},
+				error : function(a, b, c) {
+					alert("error");
+				}
+			});
+		});
+	}
+}*/
+
+$(function() {
+    $('#save').on('click', function() {
+        html2canvas(document.querySelector('.content')).then(canvas => {
+            saveAs(canvas.toDataURL('image/png'), "card.png");
+        });
+    });
+    function saveAs(url, filename) {
+        var link = document.createElement('a');
+        if(typeof link.download === "string") {
+            link.href = url;
+            link.download = filename;
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        } else  {
+            window.open(url);
+        }
+    }
+});
 
 const dragElement = (e) => {
   const MAX_WIDTH = 5000, MAX_HEIGHT = 5000;
@@ -151,3 +187,68 @@ function scale() {
     document.getElementById('we').style.width = val / he * wi + 'px';
     document.getElementById('we').style.height = val + 'px';
 }
+
+/**
+ * @type HTMLDivElement
+ */
+var rarity = document.getElementById('rarity');
+/**
+ * @type HTMLInputElement
+ */
+var rare = document.getElementById('rare');
+
+rare.addEventListener('input', function() {
+    if(rare.value == 0) {
+        rarity.innerText = "COMMON";
+        rare.style.accentColor = "#aaa";
+        rarity.style.background = "#aaa";''
+    }
+    if(rare.value == 1) {
+        rarity.innerText = "RARE";
+        rare.style.accentColor = "#a7c957";
+        rarity.style.background = "#a7c957";
+    }
+    if(rare.value == 2) {
+        rarity.innerText = "SUPER RARE";
+        rare.style.accentColor = "#00bbf9";
+        rarity.style.background = "#00bbf9";
+    }
+    if(rare.value == 3) {
+        rarity.innerText = "EPIC";
+        rare.style.accentColor = "#f15bb5";
+        rarity.style.background = "#f15bb5";
+    }
+    if(rare.value == 4) {
+        rarity.innerText = "MYTHICAL";
+        rare.style.accentColor = "#d00";
+        rarity.style.background = "linear-gradient(90deg, rgba(255,0,0,1) 0%, rgba(110,255,163,1) 100%)";
+    }
+    if(rare.value == 5) {
+        rarity.innerText = "LEGENDARY";
+        rare.style.accentColor = "#ff9f1c";
+        rarity.style.background = "linear-gradient(90deg, rgba(0,255,209,1) 0%, rgba(255,110,252,1) 100%)";
+    }
+    if(rare.value == 6) {
+        rarity.innerText = "DLC";
+        rare.style.accentColor = "#ff00c2";
+        rarity.style.background = "linear-gradient(90deg, rgba(255,0,0,1) 0%, rgba(255,0,194,1) 45%, rgba(162,0,255,1) 100%)";
+    }
+    if(rare.value == 7) {
+        rarity.innerText = "SPECIAL";
+        rare.style.accentColor = "#fff";
+        rarity.style.background = "linear-gradient(90deg, rgba(255,51,153,1) 0%, rgba(255,51,153,1) 25%, rgba(255,255,0,1) 50%, rgba(1,167,143,1) 75%, rgba(51,102,255,1) 100%)";
+    }
+});
+
+var atk = document.getElementById('atk');
+var atks = document.getElementById('atks');
+var def = document.getElementById('def');
+var defs = document.getElementById('defs');
+
+atk.addEventListener('input', function() {
+    atks.innerText = "ATK : " + atk.value;
+});
+
+def.addEventListener('input', function() {
+    defs.innerText = "DEF : " + def.value;
+});
