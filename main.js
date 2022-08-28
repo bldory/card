@@ -47,6 +47,7 @@ fileChange.addEventListener('change', function (event) {
 var wob = document.getElementById('black');
 var skill = document.getElementById('skill');
 var skillname = document.getElementById('skillcon');
+var skillname1 = document.getElementById('skillname');
 
 wob.addEventListener('input', function() {
     if(wob.value == 0) {
@@ -72,7 +73,7 @@ cs.addEventListener('keyup', function() {
 
 var csn = document.getElementById('csn');
 csn.addEventListener('keyup', function() {
-    skillname.innerText = csn.value;
+    skillname1.innerText = csn.value;
 });
 
 function setnumber() {
