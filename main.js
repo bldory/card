@@ -46,18 +46,22 @@ fileChange.addEventListener('change', function (event) {
 
 var wob = document.getElementById('black');
 var skill = document.getElementById('skill');
-var skillname = document.getElementById('skillname');
+var skillname = document.getElementById('skillcon');
 
 wob.addEventListener('input', function() {
     if(wob.value == 0) {
         skill.style.color = 'black';
         skillname.style.color = "black";
         skillname.style.textShadow = "#fff 0 0 5px"
+        atks.style.color = 'black';
+        defs.style.color = 'black';
     }
     if(wob.value == 1) {
         skill.style.color = 'white';
         skillname.style.color = 'white';
         skillname.style.textShadow = "#000 0 0 5px";
+        atks.style.color = 'white';
+        defs.style.color = 'white';
     }
 });
 
@@ -172,7 +176,7 @@ rare.addEventListener('input', function() {
     if(rare.value == 0) {
         rarity.innerText = "COMMON";
         rare.style.accentColor = "#aaa";
-        rarity.style.background = "#aaa";''
+        rarity.style.background = "#aaa";
     }
     if(rare.value == 1) {
         rarity.innerText = "RARE";
