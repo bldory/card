@@ -92,35 +92,6 @@ console.log(numbel);
     }
 }
 
-/*$("#save").on("click", function() {
-	sreenShot($(".content"));
-});
-
-function sreenShot(target) {
-	if (target != null && target.length > 0) {
-		var t = target[0];
-		html2canvas(t).then(function(canvas) {
-			var myImg = canvas.toDataURL("image/png");
-			myImg = myImg.replace("data:image/png;base64,", "");
-
-			$.ajax({
-				type : "POST",
-				data : {
-					"imgSrc" : myImg
-				},
-				dataType : "text",
-				url : contextPath + "/public/ImgSaveTest.do",
-				success : function(data) {
-					console.log(data);
-				},
-				error : function(a, b, c) {
-					alert("error");
-				}
-			});
-		});
-	}
-}*/
-
 $(function() {
     $('#save').on('click', function() {
         html2canvas(document.querySelector('.content')).then(canvas => {
@@ -252,3 +223,28 @@ atk.addEventListener('input', function() {
 def.addEventListener('input', function() {
     defs.innerText = "DEF : " + def.value;
 });
+
+var type = document.getElementsByName('type');
+var sktype = document.getElementById('skilltype');
+
+document.getElementById('subtype').onclick = function() {
+    var radios = document.getElementsByName("type");
+    var selected = Array.from(radios).find(radio => radio.checked);
+    switch(selected.value) {
+        case 'ABILLITY' :
+            sktype.innerText = 'ⓐ';
+            break;
+        case 'BUFF' :
+            sktype.innerText = 'ⓑ';
+            break;
+        case 'COUNTER' :
+            sktype.innerText = 'ⓒ';
+            break;
+        case 'DEBUFF' :
+            sktype.innerText = 'ⓓ';
+            break;
+        case 'ETC' :
+            sktype.innerText = 'ⓔ';
+            break;
+    }
+}

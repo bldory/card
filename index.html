@@ -18,7 +18,10 @@
         <img src="" alt="" id="we"/>
         <div id="rarity">COMMON</div>
         <div><b id="cardnumber"></b></div>
-        <div id="skillname">Deja vu</div>
+        <div id="skillcon">
+          <p id="skilltype">ⓐ</p>
+          <p id="skillname">Deja vu</p>
+        </div>
         <div id="skill">질주하여 사람을 박습니다.</div>
         <div id="stat"><p id="atks">ATK : </p><p id="defs">DEF : </p></div>
     </div>
@@ -37,6 +40,17 @@
     <br>
     <input type="text" name="atk" id="atk" placeholder="공격력을 입력하세요"><br>
     <input type="text" name="def" id="def" placeholder="방어력을 입력하세요"><br>
+    <input type="radio" name="type" id="type1" value="ABILLITY">
+    <label for="type1">Abillity</label><br>
+    <input type="radio" name="type" id="type2" value="BUFF">
+    <label for="type2">Buff</label><br>
+    <input type="radio" name="type" id="type3" value="COUNTER">
+    <label for="type3">Counter</label><br>
+    <input type="radio" name="type" id="type4" value="DEBUFF">
+    <label for="type4">Debuff</label><br>
+    <input type="radio" name="type" id="type5" value="ETC">
+    <label for="type5">ETC</label><br>
+    <button id="subtype">타입 결정</button><br>
     <button id="save">다운로드</button>
     <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
     <script src="./main.js"></script>
