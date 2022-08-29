@@ -197,12 +197,12 @@ rare.addEventListener('input', function() {
     if(rare.value == 4) {
         rarity.innerText = "MYTHICAL";
         rare.style.accentColor = "#d00";
-        rarity.style.background = "linear-gradient(-225deg, rgba(255,0,0,1) 0%, rgba(105,255,0,1) 100%)";
+        rarity.style.background = "linear-gradient(90deg, rgba(255,0,0,1) 0%, rgba(255,188,46,1) 100%)";
     }
     if(rare.value == 5) {
         rarity.innerText = "LEGENDARY";
         rare.style.accentColor = "#ff9f1c";
-        rarity.style.background = "linear-gradient(-45deg, rgba(91,129,202,1) 0%, rgba(149,255,74,1) 100%)";
+        rarity.style.background = "linear-gradient(90deg, rgba(255,136,0,1) 0%, rgba(248,255,46,1) 100%)";
     }
     if(rare.value == 6) {
         rarity.innerText = "DLC";
