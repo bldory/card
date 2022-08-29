@@ -177,17 +177,17 @@ rare.addEventListener('input', function() {
     if(rare.value == 0) {
         rarity.innerText = "NORMAL";
         rare.style.accentColor = "#aaa";
-        rarity.style.background = "#aaa";
+        rarity.style.background = "linear-gradient(90deg, rgba(200,252,255,1) 0%, rgba(0,128,255,1) 100%)";
     }
     if(rare.value == 1) {
         rarity.innerText = "RARE";
         rare.style.accentColor = "#";
-        rarity.style.background = "linear-gradient(90deg, rgba(255,244,0,1) 0%, rgba(125,209,130,1) 100%)";
+        rarity.style.background = "linear-gradient(90deg, rgba(154,255,46,1) 0%, rgba(0,117,25,1) 100%)";
     }
     if(rare.value == 2) {
         rarity.innerText = "SUPER RARE";
         rare.style.accentColor = "#00bbf9";
-        rarity.style.background = "linear-gradient(90deg, rgba(255,244,0,1) 0%, rgba(0,176,255,1) 100%)";
+        rarity.style.background = "linear-gradient(90deg, rgba(46,255,245,1) 0%, rgba(99,0,255,1) 75%)";
     }
     if(rare.value == 3) {
         rarity.innerText = "EPIC";
