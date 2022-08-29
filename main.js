@@ -175,43 +175,48 @@ var rare = document.getElementById('rare');
 
 rare.addEventListener('input', function() {
     if(rare.value == 0) {
-        rarity.innerText = "COMMON";
+        rarity.innerText = "NORMAL";
         rare.style.accentColor = "#aaa";
         rarity.style.background = "#aaa";
     }
     if(rare.value == 1) {
         rarity.innerText = "RARE";
-        rare.style.accentColor = "#a7c957";
-        rarity.style.background = "#a7c957";
+        rare.style.accentColor = "#";
+        rarity.style.background = "linear-gradient(90deg, rgba(255,244,0,1) 0%, rgba(125,209,130,1) 100%)";
     }
     if(rare.value == 2) {
         rarity.innerText = "SUPER RARE";
         rare.style.accentColor = "#00bbf9";
-        rarity.style.background = "#00bbf9";
+        rarity.style.background = "linear-gradient(90deg, rgba(255,244,0,1) 0%, rgba(0,176,255,1) 100%)";
     }
     if(rare.value == 3) {
         rarity.innerText = "EPIC";
         rare.style.accentColor = "#f15bb5";
-        rarity.style.background = "#f15bb5";
+        rarity.style.background = "linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(252,69,69,1) 100%)";
     }
     if(rare.value == 4) {
-        rarity.innerText = "MYTHICAL";
-        rare.style.accentColor = "#d00";
-        rarity.style.background = "linear-gradient(90deg, rgba(255,0,0,1) 0%, rgba(110,255,163,1) 100%)";
+        rarity.innerText = "SUPER EPIC";
+        rare.style.accentColor = "#f15bb5";
+        rarity.style.background = "linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%)";
     }
     if(rare.value == 5) {
-        rarity.innerText = "LEGENDARY";
-        rare.style.accentColor = "#ff9f1c";
-        rarity.style.background = "linear-gradient(90deg, rgba(0,255,209,1) 0%, rgba(255,110,252,1) 100%)";
+        rarity.innerText = "MYTHICAL";
+        rare.style.accentColor = "#d00";
+        rarity.style.background = "linear-gradient(-225deg, rgba(255,0,0,1) 0%, rgba(105,255,0,1) 100%)";
     }
     if(rare.value == 6) {
+        rarity.innerText = "LEGENDARY";
+        rare.style.accentColor = "#ff9f1c";
+        rarity.style.background = "linear-gradient(-45deg, rgba(91,129,202,1) 0%, rgba(149,255,74,1) 100%)";
+    }
+    if(rare.value == 7) {
         rarity.innerText = "DLC";
         rare.style.accentColor = "#ff00c2";
         rarity.style.background = "linear-gradient(90deg, rgba(255,0,0,1) 0%, rgba(255,0,194,1) 45%, rgba(162,0,255,1) 100%)";
     }
-    if(rare.value == 7) {
-        rarity.innerText = "SPECIAL";
-        rare.style.accentColor = "#fff";
+    if(rare.value == 8) {
+        rarity.innerText = "UNIQUE";
+        rare.style.accentColor = "#cdcdcd";
         rarity.style.background = "linear-gradient(90deg, rgba(255,51,153,1) 0%, rgba(255,51,153,1) 25%, rgba(255,255,0,1) 50%, rgba(1,167,143,1) 75%, rgba(51,102,255,1) 100%)";
     }
 });
@@ -253,3 +258,5 @@ document.getElementById('subtype').onclick = function() {
             break;
     }
 }
+
+$( ":radio").checkboxradio();
