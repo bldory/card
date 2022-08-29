@@ -1,6 +1,3 @@
-/**
- * @type number;
- */
 var wi = document.getElementById('we').width;
 var he = document.getElementById('we').height;
 
@@ -46,23 +43,18 @@ fileChange.addEventListener('change', function (event) {
 
 var wob = document.getElementById('black');
 var skill = document.getElementById('skill');
-var skillname = document.getElementById('skillcon');
-var skillname1 = document.getElementById('skillname');
+var skillname = document.getElementById('skillname');
 
 wob.addEventListener('input', function() {
     if(wob.value == 0) {
         skill.style.color = 'black';
         skillname.style.color = "black";
         skillname.style.textShadow = "#fff 0 0 5px"
-        atks.style.color = 'black';
-        defs.style.color = 'black';
     }
     if(wob.value == 1) {
         skill.style.color = 'white';
         skillname.style.color = 'white';
         skillname.style.textShadow = "#000 0 0 5px";
-        atks.style.color = 'white';
-        defs.style.color = 'white';
     }
 });
 
@@ -73,7 +65,7 @@ cs.addEventListener('keyup', function() {
 
 var csn = document.getElementById('csn');
 csn.addEventListener('keyup', function() {
-    skillname1.innerText = csn.value;
+    skillname.innerText = csn.value;
 });
 
 function setnumber() {
@@ -97,25 +89,21 @@ console.log(numbel);
     }
 }
 
-$(function() {
-    $('#save').on('click', function() {
-        html2canvas(document.querySelector('.content')).then(canvas => {
-            saveAs(canvas.toDataURL('image/png'), "card.png");
-        });
-    });
-    function saveAs(url, filename) {
-        var link = document.createElement('a');
-        if(typeof link.download === "string") {
-            link.href = url;
-            link.download = filename;
-            document.body.appendChild(link);
-            link.click();
-            document.body.removeChild(link);
-        } else  {
-            window.open(url);
-        }
-    }
-});
+function PrintDiv(div){
+	div = div[0]
+	html2canvas(div).then(function(canvas){
+		var myImage = canvas.toDataURL();
+		downloadURI(myImage, "card.png") 
+	});
+}
+
+function downloadURI(uri, name){
+	var link = document.createElement("a")
+	link.download = name;
+	link.href = uri;
+	document.body.appendChild(link);
+	link.click();
+}
 
 const dragElement = (e) => {
   const MAX_WIDTH = 5000, MAX_HEIGHT = 5000;
@@ -164,92 +152,32 @@ function scale() {
     document.getElementById('we').style.height = val + 'px';
 }
 
-/**
- * @type HTMLDivElement
- */
-var rarity = document.getElementById('rarity');
-/**
- * @type HTMLInputElement
- */
 var rare = document.getElementById('rare');
+var rarre = document.getElementById('rairity');
 
 rare.addEventListener('input', function() {
-    if(rare.value == 0) {
-        rarity.innerText = "COMMON";
-        rare.style.accentColor = "#aaa";
-        rarity.style.background = "#aaa";
+    if (rare.value == 0) {
+        rarre.innerText = "COMMON";
+        rare.style.accentColor= "#aaa";
     }
-    if(rare.value == 1) {
-        rarity.innerText = "RARE";
-        rare.style.accentColor = "#a7c957";
-        rarity.style.background = "#a7c957";
+    if (rare.value == 1) {
+        rarre.innerText = "UNCOMMON";
+        rare.style.accentColor= "#0ba552";
     }
-    if(rare.value == 2) {
-        rarity.innerText = "SUPER RARE";
-        rare.style.accentColor = "#00bbf9";
-        rarity.style.background = "#00bbf9";
+    if (rare.value == 2) {
+        rarre.innerText = "RARE";
+        rare.style.accentColor= "#5888f5";
     }
-    if(rare.value == 3) {
-        rarity.innerText = "EPIC";
-        rare.style.accentColor = "#f15bb5";
-        rarity.style.background = "#f15bb5";
+    if (rare.value == 3) {
+        rarre.innerText = "EPIC";
+        rare.style.accentColor = "#f890e7";
     }
-    if(rare.value == 4) {
-        rarity.innerText = "MYTHICAL";
-        rare.style.accentColor = "#d00";
-        rarity.style.background = "linear-gradient(90deg, rgba(255,0,0,1) 0%, rgba(110,255,163,1) 100%)";
+    if (rare.value == 4) {
+        rarre.innerText = "LEGANDARY";
+        rare.style.accentColor= "#fbb93f";
     }
-    if(rare.value == 5) {
-        rarity.innerText = "LEGENDARY";
-        rare.style.accentColor = "#ff9f1c";
-        rarity.style.background = "linear-gradient(90deg, rgba(0,255,209,1) 0%, rgba(255,110,252,1) 100%)";
-    }
-    if(rare.value == 6) {
-        rarity.innerText = "DLC";
-        rare.style.accentColor = "#ff00c2";
-        rarity.style.background = "linear-gradient(90deg, rgba(255,0,0,1) 0%, rgba(255,0,194,1) 45%, rgba(162,0,255,1) 100%)";
-    }
-    if(rare.value == 7) {
-        rarity.innerText = "SPECIAL";
-        rare.style.accentColor = "#fff";
-        rarity.style.background = "linear-gradient(90deg, rgba(255,51,153,1) 0%, rgba(255,51,153,1) 25%, rgba(255,255,0,1) 50%, rgba(1,167,143,1) 75%, rgba(51,102,255,1) 100%)";
+    if (rare.value == 5) {
+        rarre.innerText = "LEGANDARY";
+        rare.style.accentColor= "#fbb93f";
     }
 });
-
-var atk = document.getElementById('atk');
-var atks = document.getElementById('atks');
-var def = document.getElementById('def');
-var defs = document.getElementById('defs');
-
-atk.addEventListener('input', function() {
-    atks.innerText = "ATK : " + atk.value;
-});
-
-def.addEventListener('input', function() {
-    defs.innerText = "DEF : " + def.value;
-});
-
-var type = document.getElementsByName('type');
-var sktype = document.getElementById('skilltype');
-
-document.getElementById('subtype').onclick = function() {
-    var radios = document.getElementsByName("type");
-    var selected = Array.from(radios).find(radio => radio.checked);
-    switch(selected.value) {
-        case 'ABILLITY' :
-            sktype.innerText = 'ⓐ';
-            break;
-        case 'BUFF' :
-            sktype.innerText = 'ⓑ';
-            break;
-        case 'COUNTER' :
-            sktype.innerText = 'ⓒ';
-            break;
-        case 'DEBUFF' :
-            sktype.innerText = 'ⓓ';
-            break;
-        case 'ETC' :
-            sktype.innerText = 'ⓔ';
-            break;
-    }
-}

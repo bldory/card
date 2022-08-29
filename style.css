@@ -1,6 +1,5 @@
 * {
     accent-color: #aaa;
-    vertical-align: middle;
 }
 
 .content {
@@ -9,13 +8,14 @@
     height: 297px;
     overflow: hidden;
     background: #000;
+    ba
 }
 
 #cname {
     text-align: center;
     padding: 5px;
     left: 0px;
-    top: 2px;
+    top: -5px;
     width: 115px;
     font-size: larger;
     position: absolute;
@@ -23,9 +23,21 @@
     z-index: 2;
 }
 
+#rairity {
+  font-family: 'PyeongChangPeace-Light';
+  color: #fff;
+  position: absolute;
+  z-index: 1;
+  top: 27px;
+  text-align: center;
+  font-size: xx-small;
+  width: 90px;
+  right: 0px;
+  font-weight: bolder;
+}
+
 #we {
     position: relative;
-    z-index: 0;
 }
 
 #i {
@@ -35,26 +47,21 @@
 
 #cardnumber {
     position: absolute;
-    z-index: 2;
+    z-index: 3;
     right: 8px;
     top: 4px;
     font-size: small;
-    vertical-align: middle;
 }
 
-#skillcon {
+#skillname {
     position: absolute;
     font-family: 'KOTRALEAP';
     top: 220px;
     width: 210px;
     text-align: center;
     text-shadow: #000 0 0 5px;
-    z-index: 2;
+    z-index: 4;
     color: #fff;
-}
-
-p {
-    display: inline;
 }
 
 #skill {
@@ -67,49 +74,14 @@ p {
     bottom: 0px;
     text-align: center;
     font-size: 12px;
-    z-index: 2;
+    z-index: 5;
     color: white;
-}
-
-#rarity {
-    font-family: 'PyeongChangPeace-Light';
-    color: #fff;
-    position: absolute;
-    z-index: 2;
-    top: 28px;
-    text-align: center;
-    font-size: xx-small;
-    width: 70px;
-    right: 10px;
-    font-weight: bolder;
-    background-color: #aaa;
-    text-shadow: #000 0 0 2px;
-    vertical-align: middle;
-}
-
-#atks {
-    font-family: 'JSongMyung-Regular-KO';
-    position: absolute;
-    bottom: -11px;
-    left: 4px;
-    font-size: 12px;
-    color: white;
-    vertical-align: middle;
-}
-
-#defs {
-    font-family: 'JSongMyung-Regular-KO';
-    position: absolute;
-    bottom: -11px;
-    right: 4px;
-    font-size: 12px;
-    color: white;
-    vertical-align: middle;
+    viewport-fit: top;
 }
 
 @font-face {
     font-family: 'OKCHAN';
-    src: url('./Title_Bold.woff') format('woff2');
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2206-02@1.0/OKCHAN.woff2') format('woff2');
     font-weight: normal;
     font-style: normal;
 }
@@ -132,12 +104,5 @@ p {
     font-family: 'PyeongChangPeace-Light';
     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2206-02@1.0/PyeongChangPeace-Light.woff2') format('woff2');
     font-weight: 300;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'JSongMyung-Regular-KO';
-    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
-    font-weight: normal;
     font-style: normal;
 }
