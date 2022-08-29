@@ -142,10 +142,10 @@ p {
     font-style: normal;
 }
 
-#till {
+#til {
   color: #fff;
   padding: 0.7rem 0.7rem 0.7rem 2rem;
   border-radius: 10px;
-  background: linear-gradient(45deg, rgb(254, 107, 139) 30%, rgb(255, 142, 83) 90%);
-  box-shadow: rgba(255, 105, 135, 0.3) 0px 3px 5px 2px;
+  background: linear-gradient(90deg, rgba(255,111,0,1) 0%, rgba(255,252,46,1) 100%);
+  box-shadow: rgba(255, 252, 46, 0.3) 0px 3px 5px 2px;
 }
