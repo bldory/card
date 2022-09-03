@@ -226,7 +226,7 @@
  });
  
  def.addEventListener('input', function() {
-     defs.innerText = "DEF : " + def.value;
+     defs.innerText = "HP : " + def.value;
  });
  
  var type = document.getElementsByName('type');
