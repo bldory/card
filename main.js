@@ -3,6 +3,8 @@
  */
  var wi = document.getElementById('we').width;
  var he = document.getElementById('we').height;
+
+ var righttype = 'HP';
  
  $('#we').draggable({
      scroll: false,
@@ -226,7 +228,7 @@
  });
  
  def.addEventListener('input', function() {
-     defs.innerText = "HP : " + def.value;
+     defs.innerText = righttype +  " : " + def.value;
  });
  
  var type = document.getElementsByName('type');
@@ -256,3 +258,20 @@
  
  $( ":radio").checkboxradio();
  
+var rtype = document.getElementById('rtype');
+rtype.addEventListener('input', function() {
+    switch(rtype.value) {
+        case 'def' :
+            righttype = 'DEF';
+            defs.innerText = righttype +  " : " + def.value;
+            break;
+        case 'hp' :
+            righttype = 'HP';
+            defs.innerText = righttype +  " : " + def.value;
+            break;
+        case 'avp' :
+            righttype = 'AVO';
+            defs.innerText = righttype +  " : " + def.value;
+            break;
+    }
+});
