@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>극딜 룰렛</title>
+  </head>
+  <body>
+    <h1>극딜 룰렛</h1>
+    <span contenteditable="true" style="border: #aaa solid 2px">매조동</span
+    ><span>은/는</span> <span id="res"></span><br /><br />
+    <textarea name="" id="array" cols="30" rows="1"></textarea>
+    <button id="btn">돌리기</button>
+    <p style="position: absolute; bottom: 0px">
+      이름을 입력하고 버튼 옆에 있는 공간에 아무거나 입력해 주세요! 쉼표로
+      구분하고 띄어쓰기는 하지 않습니다.
+    </p>
+    <script>
+      /**
+       * @type {HTMLTextAreaElement}
+       */
+      var array = document.getElementById("array");
+      var code = [];
+      var i = 0;
+      var ran;
+      var isRunning = false;
+      function go() {
+        isRunning = true;
+        clearInterval(ran);
+        array = document.getElementById("array");
+        code = array.value.split(",");
+        ran = setInterval(() => {
+          res.innerText = code[i];
+          console.log(i);
+          i++;
+          console.log(code[i]);
+          if (i >= code.length) {
+            i = 0;
+          }
+        }, 50);
+      }
+      var btn = document.getElementById("btn");
+      btn.addEventListener("click", function () {
+        if (isRunning) {
+          clearInterval(ran);
+          isRunning = false;
+          this.innerText = "돌리기";
+        } else if (!isRunning) {
+          this.innerText = "멈추기";
+          go();
+        }
+      });
+    </script>
+  </body>
+</html>

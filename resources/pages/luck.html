@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>행운고사</title>
+    <style>
+      * {
+        justify-content: center;
+        text-align: center;
+      }
+      #agu {
+        background-color: #f7a52b;
+        color: #fff;
+        text-align: center;
+        width: 50px;
+        height: 50px;
+        display: inline-block;
+      }
+      P {
+        vertical-align: middle;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>행운고사</h1>
+    <div id="agu"><p>아구몬</p></div>
+    <br />
+    <br />
+    <input
+      type="number"
+      name="per"
+      id="per"
+      placeholder="확률 입력하라구요"
+    /><br /><br />
+    <button id="btn">진화시키기</button>
+    <script>
+      function rand(min, max) {
+        return Math.floor(Math.random() * (max - min)) + min;
+      }
+      var btn = document.getElementById("btn");
+      var inp = document.getElementById("per");
+      var agu = document.getElementById("agu");
+      var per;
+      btn.addEventListener("click", function () {
+        inp = document.getElementById("per");
+        per = rand(0, 100);
+        if (per <= inp.value) {
+          agu.innerText = "그레이몬";
+          agu.style.background =
+            "linear-gradient(180deg, rgba(255,154,0,1) 0%, rgba(96,96,96,1) 100%)";
+        }
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,14 @@
+fieldset {
+  display: inline-block;
+}
+
+a {
+  color: #0275d8;
+  text-decoration: none;
+  padding: 3px;
+  border: #aaa solid 2px;
+}
+
+a:hover {
+  text-decoration: underline;
+}

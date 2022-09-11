@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>페소의 그랜절</title>
+  </head>
+  <body>
+    <h1>페소의 그랜절 챌린지</h1>
+    <button id="jul">그랜절 하기</button>
+    <div id="jan">잔고 :</div>
+    <script>
+      var ran = 26;
+      var don = 0;
+      var jul = document.getElementById("jul");
+      var jan = document.getElementById("jan");
+      jul.addEventListener("click", function () {
+        ran = rand(0, 71);
+        console.log(ran);
+        if (ran < 5) {
+          alert("머리를 다쳤습니다! 병원비 5만원!");
+          don -= 50000;
+          jan.innerText = "잔고 : " + don + "원";
+        } else if (5 < ran && ran < 20) {
+          alert("길가다가 하수구에 500원을 빠뜨렸습니다.");
+          don -= 500;
+          jan.innerText = "잔고 : " + don + "원";
+        } else if (ran == 70) {
+          alert("충동구매로 닌텐도 스위치 구입! -700000원!");
+          don -= 700000;
+          jan.innerText = "잔고 : " + don + "원";
+        } else {
+          don += 10000;
+          jan.innerText = "잔고 : " + don + "원";
+        }
+      });
+
+      function rand(min, max) {
+        return Math.floor(Math.random() * (max - min)) + min;
+      }
+    </script>
+  </body>
+</html>
