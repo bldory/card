@@ -241,7 +241,7 @@ var def = document.getElementById("def");
 var defs = document.getElementById("defs");
 
 atk.addEventListener("input", function () {
-  atks.innerText = "ATK : " + atk.value;
+  atks.innerText = lefttype + " : " + atk.value;
 });
 
 def.addEventListener("input", function () {
