@@ -1,150 +1,162 @@
 * {
-    accent-color: #aaa;
-    vertical-align: middle;
+  accent-color: #aaa;
+  vertical-align: middle;
 }
 
 .content {
-    position: relative;
-    width: 210px;
-    height: 297px;
-    overflow: hidden;
-    background: #000;
+  position: relative;
+  width: 210px;
+  height: 297px;
+  overflow: hidden;
+  background: #000;
 }
 
 #cname {
-    text-align: center;
-    padding: 5px;
-    left: 0px;
-    top: 2px;
-    width: 115px;
-    font-size: larger;
-    position: absolute;
-    font-family: 'OKCHAN';
-    z-index: 2;
+  text-align: center;
+  padding: 5px;
+  left: 0px;
+  top: 2px;
+  width: 115px;
+  font-size: larger;
+  position: absolute;
+  font-family: "OKCHAN";
+  z-index: 2;
 }
 
 #we {
-    position: relative;
-    z-index: 0;
+  position: relative;
+  z-index: 0;
 }
 
 #i {
-    position: absolute;
-    z-index: 1;
+  position: absolute;
+  z-index: 1;
 }
 
 #cardnumber {
-    position: absolute;
-    z-index: 2;
-    right: 8px;
-    top: 4px;
-    font-size: small;
-    vertical-align: middle;
+  position: absolute;
+  z-index: 2;
+  right: 8px;
+  top: 4px;
+  font-size: small;
+  vertical-align: middle;
 }
 
 #skillcon {
-    position: absolute;
-    font-family: 'KOTRALEAP';
-    top: 220px;
-    width: 210px;
-    text-align: center;
-    text-shadow: #000 0 0 5px;
-    z-index: 2;
-    color: #fff;
+  position: absolute;
+  font-family: "KOTRALEAP";
+  top: 220px;
+  width: 210px;
+  text-align: center;
+  text-shadow: #000 0 0 5px;
+  z-index: 2;
+  color: #fff;
 }
 
 p {
-    display: inline;
+  display: inline;
 }
 
 #skill {
-    font-family: 'HallymGothic-Regular';
-    position: absolute;
-    text-decoration-style: true;
-    bottom: 5px;
-    width: 210px;
-    height: 45px;
-    bottom: 0px;
-    text-align: center;
-    font-size: 9px;
-    z-index: 2;
-    color: white;
+  font-family: "HallymGothic-Regular";
+  position: absolute;
+  text-decoration-style: true;
+  bottom: 5px;
+  width: 210px;
+  height: 45px;
+  bottom: 0px;
+  text-align: center;
+  font-size: 9px;
+  z-index: 2;
+  color: white;
 }
 
 #rarity {
-    font-family: 'PyeongChangPeace-Light';
-    color: #fff;
-    position: absolute;
-    z-index: 2;
-    top: 28px;
-    text-align: center;
-    font-size: xx-small;
-    width: 70px;
-    right: 10px;
-    font-weight: bolder;
-    background-color: #aaa;
-    text-shadow: #000 0 0 2px;
-    vertical-align: middle;
+  font-family: "PyeongChangPeace-Light";
+  color: #fff;
+  position: absolute;
+  z-index: 2;
+  top: 28px;
+  text-align: center;
+  font-size: xx-small;
+  width: 70px;
+  right: 10px;
+  font-weight: bolder;
+  background-color: #aaa;
+  text-shadow: #000 0 0 2px;
+  vertical-align: middle;
 }
 
 #atks {
-    font-family: 'JSongMyung-Regular-KO';
-    position: absolute;
-    bottom: -11px;
-    left: 4px;
-    font-size: 12px;
-    color: white;
-    vertical-align: middle;
+  font-family: "JSongMyung-Regular-KO";
+  position: absolute;
+  bottom: -11px;
+  left: 4px;
+  font-size: 12px;
+  color: white;
+  vertical-align: middle;
 }
 
 #defs {
-    font-family: 'JSongMyung-Regular-KO';
-    position: absolute;
-    bottom: -11px;
-    right: 4px;
-    font-size: 12px;
-    color: white;
-    vertical-align: middle;
+  font-family: "JSongMyung-Regular-KO";
+  position: absolute;
+  bottom: -11px;
+  right: 4px;
+  font-size: 12px;
+  color: white;
+  vertical-align: middle;
 }
 
 @font-face {
-    font-family: 'OKCHAN';
-    src: url('./Title_Bold.woff') format('woff2');
-    font-weight: normal;
-    font-style: normal;
+  font-family: "OKCHAN";
+  src: url("./Title_Bold.woff") format("woff2");
+  font-weight: normal;
+  font-style: normal;
 }
 
 @font-face {
-    font-family: 'HallymGothic-Regular';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2204@1.0/HallymGothic-Regular.woff2') format('woff2');
-    font-weight: 400;
-    font-style: normal;
+  font-family: "HallymGothic-Regular";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2204@1.0/HallymGothic-Regular.woff2")
+    format("woff2");
+  font-weight: 400;
+  font-style: normal;
 }
 
 @font-face {
-    font-family: 'KOTRALEAP';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2110@1.0/KOTRALEAP.woff2') format('woff2');
-    font-weight: normal;
-    font-style: normal;
+  font-family: "KOTRALEAP";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2110@1.0/KOTRALEAP.woff2")
+    format("woff2");
+  font-weight: normal;
+  font-style: normal;
 }
 
 @font-face {
-    font-family: 'PyeongChangPeace-Light';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2206-02@1.0/PyeongChangPeace-Light.woff2') format('woff2');
-    font-weight: 300;
-    font-style: normal;
+  font-family: "PyeongChangPeace-Light";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2206-02@1.0/PyeongChangPeace-Light.woff2")
+    format("woff2");
+  font-weight: 300;
+  font-style: normal;
 }
 
 @font-face {
-    font-family: 'JSongMyung-Regular-KO';
-    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
+  font-family: "JSongMyung-Regular-KO";
+  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
 }
 
 #til {
   color: #fff;
   padding: 0.7rem 0.7rem 0.7rem 2rem;
   border-radius: 10px;
-  background: linear-gradient(90deg, rgba(255,111,0,1) 0%, rgba(255,252,46,1) 100%);
+  background: linear-gradient(
+    90deg,
+    rgba(255, 111, 0, 1) 0%,
+    rgba(255, 252, 46, 1) 100%
+  );
+}
+
+fieldset {
+  display: inline-block;
 }
