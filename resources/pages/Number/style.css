@@ -1,0 +1,36 @@
+.content {
+  background-color: #000;
+  color: #fff;
+  content: "뷁";
+  padding: 20px;
+  width: auto;
+}
+
+#ntit {
+  background-color: #000;
+  font-family: "HeirofLightBold";
+  font-size: 100px;
+}
+
+#ntit::before {
+  content: "\201C";
+  font-weight: lighter;
+}
+
+#ntit::after {
+  content: "\201D";
+}
+
+@font-face {
+  font-family: "HeirofLightBold";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@1.0/ChosunKm.woff")
+    format("woff");
+  font-weight: lighter;
+  font-style: normal;
+}
+
+#mun {
+  padding: 2px;
+  font-family: "HeirofLightBold";
+  line-height: 105%;
+}

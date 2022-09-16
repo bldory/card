@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>숫자 비유가</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script>
+    <link rel="stylesheet" href="../../javascript/JQuery/jquery-ui.css" />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <label for="il">일</label>
+    <input type="radio" name="rad" id="il" value="" checked />
+    <label for="man">만</label>
+    <input type="radio" name="rad" id="man" value="만" />
+    <label for="uk">억</label>
+    <input type="radio" name="rad" id="uk" value="억" />
+    <label for="jo">조</label>
+    <input type="radio" name="rad" id="jo" value="조" />
+    <label for="gyung">경</label>
+    <input type="radio" name="rad" id="gyung" value="경" />
+    <label for="he">해</label>
+    <input type="radio" name="rad" id="he" value="해" />
+    <input name="num" id="num" type="number" />
+    <div class="content">
+      <div id="ntit">1</div>
+      <div id="mun"></div>
+    </div>
+    <script>
+      $(function () {
+        $("input:radio").checkboxradio();
+      });
+    </script>
+    <script src="./main.js"></script>
+  </body>
+</html>
