@@ -58,6 +58,7 @@ wob.addEventListener("input", function () {
     skill.style.color = "black";
     skillname.style.color = "black";
     skillname.style.textShadow = "#fff 0 0 5px";
+    skill.style.textShadow = "#fff 0 0 5px";
     atks.style.color = "black";
     defs.style.color = "black";
   }
@@ -65,6 +66,7 @@ wob.addEventListener("input", function () {
     skill.style.color = "white";
     skillname.style.color = "white";
     skillname.style.textShadow = "#000 0 0 5px";
+    skill.style.textShadow = "#000 0 0 5px";
     atks.style.color = "white";
     defs.style.color = "white";
   }
