@@ -191,37 +191,37 @@ rare.addEventListener("input", function () {
     rarity.innerText = "NORMAL";
     rare.style.accentColor = "#aaa";
     rarity.style.background =
-      "linear-gradient(90deg, rgba(200,252,255,1) 0%, rgba(0,128,255,1) 100%)";
+      "linear-gradient(90deg, rgba(184,179,172,1) 0%, rgba(167,149,84,1) 100%)";
   }
   if (rare.value == 1) {
     rarity.innerText = "RARE";
     rare.style.accentColor = "#";
     rarity.style.background =
-      "linear-gradient(90deg, rgba(154,255,46,1) 0%, rgba(0,117,25,1) 100%)";
+      "linear-gradient(90deg, rgba(185,255,0,1) 0%, rgba(0,190,32,1) 100%)";
   }
   if (rare.value == 2) {
     rarity.innerText = "SUPER RARE";
     rare.style.accentColor = "#00bbf9";
     rarity.style.background =
-      "linear-gradient(90deg, rgba(154,255,46,1) 0%, rgba(0,166,255,1) 100%)";
+      "linear-gradient(90deg, rgba(0,255,171,1) 0%, rgba(0,112,190,1) 100%)";
   }
   if (rare.value == 3) {
     rarity.innerText = "EPIC";
     rare.style.accentColor = "#f15bb5";
     rarity.style.background =
-      "linear-gradient(90deg, rgba(136,0,255,1) 0%, rgba(208,46,255,1) 100%)";
+      "linear-gradient(90deg, rgba(106,0,255,1) 0%, rgba(182,0,190,1) 100%)";
   }
   if (rare.value == 4) {
     rarity.innerText = "MYTHICAL";
     rare.style.accentColor = "#d00";
     rarity.style.background =
-      "linear-gradient(90deg, rgba(255,0,0,1) 0%, rgba(255,191,46,1) 100%)";
+      "linear-gradient(90deg, rgba(255,0,0,1) 9%, rgba(255,255,11,1) 57%, rgba(0,255,34,1) 100%)";
   }
   if (rare.value == 5) {
     rarity.innerText = "LEGENDARY";
     rare.style.accentColor = "#ff9f1c";
     rarity.style.background =
-      "linear-gradient(90deg, rgba(255,136,0,1) 0%, rgba(248,255,46,1) 100%)";
+      "linear-gradient(90deg, rgba(0,255,145,1) 0%, rgba(55,160,255,1) 50%, rgba(255,13,233,1) 100%)";
   }
   if (rare.value == 6) {
     rarity.innerText = "DLC";
