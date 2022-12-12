@@ -89,21 +89,21 @@ p {
 }
 
 #atks {
-  font-family: "JSongMyung-Regular-KO";
+  font-family: "matrixboldsmallcaps";
   position: absolute;
   bottom: -11px;
   left: 4px;
-  font-size: 12px;
+  font-size: 13.5px;
   color: white;
   vertical-align: middle;
 }
 
 #defs {
-  font-family: "JSongMyung-Regular-KO";
+  font-family: "matrixboldsmallcaps";
   position: absolute;
   bottom: -11px;
   right: 4px;
-  font-size: 12px;
+  font-size: 13.5px;
   color: white;
   vertical-align: middle;
 }
@@ -151,6 +151,13 @@ p {
   font-family: "MICEGothic Bold";
   src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2206-01@1.0/MICEGothic Bold.woff2")
     format("woff2");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "matrixboldsmallcaps";
+  src: url("../../font/MatrixBoldSmallCaps.otf") format("otf");
   font-weight: 700;
   font-style: normal;
 }

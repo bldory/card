@@ -24,14 +24,17 @@
     <input type="radio" name="rad" id="gyung" value="경" />
     <label for="he">해</label>
     <input type="radio" name="rad" id="he" value="해" />
-    <input name="num" id="num" type="number" />
+    <input name="num" id="num" type="number" oninput="number()" /><br /><br />
     <div class="content">
-      <div id="ntit">1</div>
+      <div id="ntit"></div>
       <div id="mun"></div>
     </div>
+    <br /><br />
+    <button id="reroll" onclick="number()">다시 돌리기</button>
     <script>
       $(function () {
         $("input:radio").checkboxradio();
+        $("button").button();
       });
     </script>
     <script src="./main.js"></script>

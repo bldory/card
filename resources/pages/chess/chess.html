@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Me친 체스</title>
+    <link href="../../javascript/JQuery/jquery-ui.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div id="dialog-form" title="주의">
+      <p class="validateTips">
+        스킬의 경우에는 복잡한 메커니즘으로 구성됩니다. 너무 복잡하거나 밸런스
+        붕괴적인 부분이 있을 경우, 캐릭터성, 컨셉의 참신함에 상관없이
+        미승인됩니다.
+      </p>
+
+      <form>
+        <fieldset>
+          <label for="okay">주의사항을 숙지하였습니다.</label>
+          <input type="checkbox" name="okay" id="okay" />
+        </fieldset>
+      </form>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script>
+    <input
+      type="text"
+      name="name"
+      id="name"
+      placeholder="기물의 이름을 입력하세요."
+    />
+    <br /><br />
+    <fieldset style="display: inline-block">
+      <legend>행마법을 입력하세요</legend>
+      <button id="le" onclick="settext('←')">←</button>
+      <button id="le" onclick="settext('→')">→</button>
+      <button id="le" onclick="settext('↑')">↑</button>
+      <button id="le" onclick="settext('↓')">↓</button>
+      <button id="le" onclick="settext('↔')">↔</button>
+      <button id="le" onclick="settext('↕')">↕</button>
+      <button id="le" onclick="settext('↗')">↗</button>
+      <button id="le" onclick="settext('↙')">↙</button>
+      <button id="le" onclick="settext('↖')">↖</button>
+      <button id="le" onclick="settext('↘')">↘</button>
+      <button id="le" onclick="settext('× ∞')">&nbsp×&nbsp∞</button>
+      <br /><br />
+      <textarea name="hangma" id="hangma" cols="30" rows="10"></textarea>
+    </fieldset>
+    <br />
+    <br />
+    <input type="checkbox" name="skill" id="skillyn" />
+    <label for="skillyn">스킬이 있습니까?</label>
+    <br /><br />
+    <fieldset id="skill" style="display: none">
+      <legend>스킬</legend>
+      <input type="number" name="range" id="range" placeholder="범위" /><br />
+      <label for="juk">도트뎀 입니까?</label>
+      <input type="checkbox" name="juk" id="juk" /><br />
+      <input
+        type="number"
+        name="dam"
+        id="dam"
+        placeholder="데미지"
+        width="350px"
+      />
+    </fieldset>
+    <script src="./main.js"></script>
+  </body>
+</html>
