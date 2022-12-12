@@ -157,7 +157,7 @@ p {
 
 @font-face {
   font-family: "matrixboldsmallcaps";
-  src: url("https://www.fontify.me/webfont/38162/matrixboldsmallcaps-bold") format("woff2");
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.1/PuradakGentleGothicR.woff2') format('woff2');
   font-weight: 700;
   font-style: normal;
 }
