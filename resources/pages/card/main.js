@@ -86,21 +86,7 @@ function setnumber() {
   const numbel = document.getElementById("number").value;
   const numbering = document.getElementById("cardnumber");
   console.log(numbel);
-  if (numbel < 10) {
-    numbering.innerText = "#00" + numbel;
-  }
-  if (10 <= numbel && numbel < 100) {
-    numbering.innerText = "#0" + numbel;
-  }
-  if (numbel >= 100 && numbel <= 99999999) {
-    numbering.innerText = "#" + numbel;
-  }
-  if (numbel < 0) {
-    numbering.innerText = "마이너스라니";
-  }
-  if (numbel > 99999999) {
-    numbering.innerText = "욕심이 너무 과한 것 아니오";
-  }
+  numbering.innerText = numbel;
 }
 
 $(function () {
