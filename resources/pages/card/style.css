@@ -91,9 +91,9 @@ p {
 #atks {
   font-family: "matrixboldsmallcaps";
   position: absolute;
-  bottom: -11px;
+  bottom: -9.2px;
   left: 4px;
-  font-size: 13.5px;
+  font-size: 10.5px;
   color: white;
   vertical-align: middle;
 }
@@ -101,9 +101,9 @@ p {
 #defs {
   font-family: "matrixboldsmallcaps";
   position: absolute;
-  bottom: -11px;
+  bottom: -9.2px;
   right: 4px;
-  font-size: 13.5px;
+  font-size: 10.5px;
   color: white;
   vertical-align: middle;
 }
@@ -157,7 +157,7 @@ p {
 
 @font-face {
   font-family: "matrixboldsmallcaps";
-  src: url("../../font/MatrixBoldSmallCaps.otf") format("otf");
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.1/PuradakGentleGothicR.woff2') format('woff2');
   font-weight: 700;
   font-style: normal;
 }
